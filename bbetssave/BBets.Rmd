@@ -47,7 +47,7 @@ varstor=numeric()
 for (j in 1:repeatn){
 brownlow = 0
 for (i in 1:count) {
-  sam=sample(days,size=34,replace = T)
+  sam=sample(days,size=30,replace = T)
   y=duplicated(sam)
   if (sum(y)>0) brownlow=brownlow+1
   else brownlow = brownlow - 2
@@ -63,7 +63,7 @@ print (paste('average return = ' , mean(varstor)))
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting!-->
 
-Professor Brownlow did pretty well with his bets despite him losing a good amount.
+Professor Brownlow did not do well with his bets.
 
 
 # Confidence interval of Brownlows earning
