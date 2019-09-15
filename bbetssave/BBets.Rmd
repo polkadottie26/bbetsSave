@@ -34,8 +34,10 @@ require(tidyverse)
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 1137 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
+First, we're going to create a histogram of all the updated information from Blackboard and use code to show us the results.
 
-#Profit Estimate
+
+# Profit Estimate
 
 ```{r}
 days=1:365
@@ -56,21 +58,28 @@ hist(varstor)
 var(varstor)
 print (paste('average return = ' , mean(varstor)))
 
-sort(varstor[50])
-sort(varstor[950])
-
 ```
 
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting!-->
+
+Professor Brownlow did pretty well with his bets despite him losing a good amount.
 
 
 # Confidence interval of Brownlows earning
 
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows-->
 
+```{r}
+vSorted = sort(varstor)
+print(vSorted[100])
+print(vSorted[900])
+```
+
+According to Blackboard, the confidence interval is 90% which means there's 5% to the right and left to make up for the remaining 10%.
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+If we change the class size to 28, it averages out to $0.
